@@ -19,20 +19,10 @@ int main()
 /* ?????????? */
 double f( int n, double a[], double x ){
 	int i = 0;
-	int sum = 0;
-	
-	double power(double x, int i){
-		const double y = x;
-		x = 1;
-		
-		for (;i>0;i--){
-			x *= y;
-		}
-		return x;
-	}
-	
+	double sum = 0;
+
 	for (;i<=n;i++){
-		sum += a[i]*power(x, i);
+		sum += a[i]*pow(x,i);
 	}
 	
 	return sum;
