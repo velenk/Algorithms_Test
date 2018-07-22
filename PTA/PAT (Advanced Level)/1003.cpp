@@ -31,25 +31,11 @@ int main() {
     distant[i] = k_Max;
   }
   //initialize the start city.
-  finish[start] = true;
   distant[start] = 0;
   road_number[start] = 1;
   team[start] = savemen[start];
-  //for every city that start city can arrive, update the distant.
-  for (j2 = 0;j2 < k_N;++j2) {
-    if (distant[start] + road[start][j2] < distant[j2]) {
-      distant[j2] = distant[start] + road[start][j2];
-      road_number[j2] = road_number[start];
-      team[j2] = team[start] + savemen[j2];
-    } else if (distant[start] + road[start][j2] == distant[j2]) {
-      road_number[j2] += road_number[start];
-      if (team[j2] < team[start] + savemen[j2]) {
-        team[j2] = team[start] + savemen[j2];
-      }
-    }
-  }
   //while now != end
-  j1 = start;
+  j1 = -1;
   while (j1 != end) {
     //for range N to find the min u.
     int d = k_Max;
@@ -83,7 +69,7 @@ int main() {
       }
     }
     finish[j1] = true;
-    cout << j1 << " " << road_number[j1] << " " << team[j1] << endl;
+    //cout << j1 << " " << road_number[j1] << " " << team[j1] << endl;
   }
   printf("%d %d",road_number[end],team[end]);
   return 0;
