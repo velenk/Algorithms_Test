@@ -17,7 +17,7 @@ int main() {
   cin >> n;
   cin >> student.id >> student.in >> student.out;
   in = out = student;
-  for (; n > 0; --n) {
+  for (; n > 1; --n) {
     cin >> student.id >> student.in >> student.out;
     if (in.in > student.in) {
       in = student;
