@@ -11,7 +11,7 @@ int book[k_max];
 bool leave[k_max];
 int count;
 
-int main() {
+void Find(int n, int m) {
   int i, j, k;
   for (i = 0; i < k_max; ++i) {
     father[i] = i;
@@ -19,8 +19,6 @@ int main() {
     book[i] = 0;
     leave[i] = true;
   }
-  int n, m;
-  cin >> n >> m;
   int id1, id2;
   for (i = 0; i < m; ++i) {
     cin >> id1 >> k;
@@ -56,6 +54,16 @@ int main() {
         cout << book[j] << endl;
       }
     }
+  }
+  return;
+}
+
+int main() {
+  int n, m;
+  cin >> n >> m;
+  while (n != 0) {
+      Find(n, m);
+      cin >> n >> m;
   }
   return 0;
 }
