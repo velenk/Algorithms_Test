@@ -7,7 +7,7 @@ int main() {
     for (i = 0; i < 7; ++i) {
         cin >> a >> b;
         if (a + b > 8 && a + b > sum) {
-            k = i;
+            k = i + 1;
             sum = a + b;
         }
     }
