@@ -13,9 +13,9 @@ int main() {
     if (a>b) swap(a, b);
     if (b-a == 1 && c-b == 1) {
         cout << "JMcat Win" << endl;
-    } else if (a == 1 && c == n && b == 2) {
+    } else if (a == 0 && c == n-1 && b == 1) {
         cout << "JMcat Win" << endl;
-    } else if (a == 1 && c == n && b == n-1) {
+    } else if (a == 0 && c == n-1 && b == n-2) {
         cout << "JMcat Win" << endl;
     } else {    
         if (n%2 == 0) {
